@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
+    "dva-loading": "^3.0.22",
+    "dva-no-router": "^1.2.1",
     "eslint": "^7.27.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",

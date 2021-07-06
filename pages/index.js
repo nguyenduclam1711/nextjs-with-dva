@@ -1,8 +1,19 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
-export default function Home() {
+const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({
+      type: 'index/calc',
+      payload: 5,
+    });
+  }, [dispatch]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -58,4 +69,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+
+export default Home;
