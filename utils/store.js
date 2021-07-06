@@ -3,9 +3,6 @@ import dva from 'dva-no-router';
 import model from '../models/index';
 import createLoading from 'dva-loading';
 
-const checkServer = () => Object.prototype.toString.call(global.process) === '[object process]';
-
-// eslint-disable-next-line
 let store;
 
 function initStore(initialState) {
@@ -28,10 +25,8 @@ function initStore(initialState) {
   app.router(() => {});
   app.use(createLoading());
   app.start();
-  // console.log(app);
-  // eslint-disable-next-line
-  const store = app._store;
-  return store;
+
+  return app._store;
 }
 
 export const initializeStore = (preloadedState) => {

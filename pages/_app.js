@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime';
 import { useStore } from '@/utils/store';
 import { Provider } from 'react-redux';
 import '../styles/globals.css';
